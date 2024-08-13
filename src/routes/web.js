@@ -1,7 +1,8 @@
 const express = require('express')
-const { getHomePage } = require('../controllers/homeControllers')
+const { getHomePage,createUser } = require('../controllers/homeControllers')
 const routerAPI = express.Router()
 
-routerAPI.get('/',getHomePage)
+routerAPI.get('/api',getHomePage)
+routerAPI.post('/create',createUser)
 
 module.exports = routerAPI
